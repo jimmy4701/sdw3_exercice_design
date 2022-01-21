@@ -9,9 +9,27 @@ body {
     grid-template-columns: repeat(5, 1fr);
 }
 
+@keyframes slidein {
+    from { transform: scaleX(0); background-color: blue; }
+    to   { transform: scaleX(1); background-color: red;}
+}
+
 .item {
     background-color: rgb(142, 142, 255);
     padding: 2em;
     color: white;
     margin: 1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    /* animation: .5s linear 1s infinite alternate slidein; */
 }
+
+.item:first-child {
+    background-color: rgb(120, 255, 120);
+}
+
+.item:hover {
+    background-color: rgb(202, 18, 18);
+    transform: scale(1.5);
+}
+
